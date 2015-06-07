@@ -10,7 +10,7 @@
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ProjectButton"
+        android:theme="@style/ProjectButton.Final"
         tools:text="Some Project Name"/>
 
 </FrameLayout>
