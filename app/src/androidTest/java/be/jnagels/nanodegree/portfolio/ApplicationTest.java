@@ -1,4 +1,4 @@
-package portfolio.nanodegree.jnagels.be.portfolio;
+package be.jnagels.nanodegree.portfolio;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
