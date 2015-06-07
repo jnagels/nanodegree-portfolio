@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:buttonStyle">@style/Portfolio.Button</item>
+    </style>
+
+    <style name="Portfolio"/>
+    <style name="Portfolio.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/project_button_background_normal</item>
+    </style>
+
+</resources>
