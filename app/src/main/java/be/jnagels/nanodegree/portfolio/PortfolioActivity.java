@@ -1,6 +1,5 @@
 package be.jnagels.nanodegree.portfolio;
 
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -70,7 +69,7 @@ public class PortfolioActivity extends AppCompatActivity implements ProjectAdapt
 	{
 		this.closeToast();
 
-		if (TextUtils.isEmpty(project.getAction()))
+		if (TextUtils.isEmpty(project.getPackageName()))
 		{
 			String message = getString(R.string.open_project, project.getName());
 
@@ -79,12 +78,12 @@ public class PortfolioActivity extends AppCompatActivity implements ProjectAdapt
 		}
 		else
 		{
-			try
+			final Intent intent = getPackageManager().getLaunchIntentForPackage(project.getPackageName());
+			if (intent != null)
 			{
-				final Intent intent = new Intent(project.getAction());
 				startActivity(intent);
 			}
-			catch(ActivityNotFoundException ex)
+			else
 			{
 				String message = getString(R.string.open_project_failed, project.getName());
 				this.toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);

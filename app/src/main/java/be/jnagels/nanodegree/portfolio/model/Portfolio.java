@@ -17,7 +17,7 @@ public class Portfolio
 
 	private void createProjects()
 	{
-		this.projects.add(new Project(0, "Spotify Streamer", "be.jnagels.nanodegree.spotify.action.SPOTIFY"));
+		this.projects.add(new Project(0, "Spotify Streamer", "be.jnagels.nanodegree.spotify"));
 		this.projects.add(new Project(1, "Scores App", null));
 		this.projects.add(new Project(2, "Library App", null));
 		this.projects.add(new Project(3, "Build it bigger", null));

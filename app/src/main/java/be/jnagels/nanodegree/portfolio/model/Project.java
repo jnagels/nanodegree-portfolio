@@ -11,19 +11,19 @@ public class Project
 	private final int id;
 	private final String name;
 	private final int type;
-	private final String action;
+	private final String packageName;
 
-	public Project(int id, String name, int type, String action)
+	public Project(int id, String name, int type, String packageName)
 	{
 		this.id = id;
 		this.name = name;
 		this.type = type;
-		this.action = action;
+		this.packageName = packageName;
 	}
 
-	public Project(int id, String name, String action)
+	public Project(int id, String name, String packageName)
 	{
-		this(id, name, TYPE_NORMAL, action);
+		this(id, name, TYPE_NORMAL, packageName);
 	}
 
 	public int getId()
@@ -41,9 +41,9 @@ public class Project
 		return type;
 	}
 
-	public String getAction()
+	public String getPackageName()
 	{
-		return action;
+		return packageName;
 	}
 
 	public boolean isTypeFinal()
