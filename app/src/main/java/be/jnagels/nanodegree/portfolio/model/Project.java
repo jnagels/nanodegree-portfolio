@@ -8,20 +8,22 @@ public class Project
 	public final static int TYPE_NORMAL = 0;
 	public final static int TYPE_FINAL = 1;
 
-	private int id;
-	private String name;
-	private int type;
+	private final int id;
+	private final String name;
+	private final int type;
+	private final String action;
 
-	public Project(int id, String name, int type)
+	public Project(int id, String name, int type, String action)
 	{
 		this.id = id;
 		this.name = name;
 		this.type = type;
+		this.action = action;
 	}
 
-	public Project(int id, String name)
+	public Project(int id, String name, String action)
 	{
-		this(id, name, TYPE_NORMAL);
+		this(id, name, TYPE_NORMAL, action);
 	}
 
 	public int getId()
@@ -37,6 +39,11 @@ public class Project
 	public int getType()
 	{
 		return type;
+	}
+
+	public String getAction()
+	{
+		return action;
 	}
 
 	public boolean isTypeFinal()

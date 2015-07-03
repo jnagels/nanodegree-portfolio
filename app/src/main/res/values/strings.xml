@@ -3,4 +3,5 @@
     <string name="action_settings">Settings</string>
 
     <string name="open_project">This will open %s</string>
+    <string name="open_project_failed">%s could not be found on this tablet. Did you install it?</string>
 </resources>

@@ -17,12 +17,12 @@ public class Portfolio
 
 	private void createProjects()
 	{
-		this.projects.add(new Project(0, "Spotify Streamer"));
-		this.projects.add(new Project(1, "Scores App"));
-		this.projects.add(new Project(2, "Library App"));
-		this.projects.add(new Project(3, "Build it bigger"));
-		this.projects.add(new Project(4, "XYZ Reader"));
-		this.projects.add(new Project(5, "Capstone: My own app", Project.TYPE_FINAL));
+		this.projects.add(new Project(0, "Spotify Streamer", "be.jnagels.nanodegree.spotify.action.SPOTIFY"));
+		this.projects.add(new Project(1, "Scores App", null));
+		this.projects.add(new Project(2, "Library App", null));
+		this.projects.add(new Project(3, "Build it bigger", null));
+		this.projects.add(new Project(4, "XYZ Reader", null));
+		this.projects.add(new Project(5, "Capstone: My own app", Project.TYPE_FINAL, null));
 	}
 
 	public ArrayList<Project> getProjects()

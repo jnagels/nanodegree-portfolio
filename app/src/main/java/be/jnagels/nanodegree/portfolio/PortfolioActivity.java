@@ -1,9 +1,12 @@
 package be.jnagels.nanodegree.portfolio;
 
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -66,10 +69,28 @@ public class PortfolioActivity extends AppCompatActivity implements ProjectAdapt
 	public void onProjectClick(Project project)
 	{
 		this.closeToast();
-		String message = getString(R.string.open_project, project.getName());
 
-		this.toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
-		this.toast.show();
+		if (TextUtils.isEmpty(project.getAction()))
+		{
+			String message = getString(R.string.open_project, project.getName());
+
+			this.toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
+			this.toast.show();
+		}
+		else
+		{
+			try
+			{
+				final Intent intent = new Intent(project.getAction());
+				startActivity(intent);
+			}
+			catch(ActivityNotFoundException ex)
+			{
+				String message = getString(R.string.open_project_failed, project.getName());
+				this.toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
+				this.toast.show();
+			}
+		}
 	}
 
 	@Override
